@@ -1,0 +1,38 @@
+normalize CSS
+implementación de css normalize.css
+este archivo normaliza el estilo por defecto de todos los navegadores web
+*versión implmentada descargada de https://necolas.github.io/normalize.css/8.0.1/normalize.css
+es el primer css que se debe referenciar en el html para que luego los siguientes css puedan aplicar el estilo por casacada
+*************************************************************************************
+autoprefixer CSS	- https://autoprefixer.github.io/
+algunas propiedades pueden variar dependiendo el navegador. ej "display"
+autoprefixer agrega los prefijos de los estilos para los distintos navegadores automaticamente.
+en este ejemplo se utiliza el programa prepros que genera automaticamente el CSS con los prefijos de cada navegador
+*hay otras herramientas en lugar de prepros y probablemente no se utilice, es solo a fines educativos
+
+luego de instalar prepros ingresar al menú desplegable arriba a la derecha
+ingresar a settings se puede modificar el estilo
+luego arrastrar la carpeta del proyecto dentro de prepros
+hacer click en el archivo styles.css
+se despliegan a la derecha una serie de opciones
+output file es el archivo generado con los prefijos para cada navegador en forma automatica. por defecto "styles-dist.css"
+tildar opcion "Process Automatically"
+chequear que la opcion "autoprefixer" este tildada
+destildar opcion "minify css"
+
+dentro de la carpeta del proyecto se va a generar el archivo "prepros.config" que no se debe tocar para nada
+
+los estilos se trabajan dentro del archivo "styles.css" (nuestro archivo) 
+pero en el html se referencia al archivo creado por prepros "styles-dist.css"
+
+en prepros ir a menu (menu hamburguesa arriba a la derecha)
+opcion project settings
+opcion css tools
+opcion autoprefixer
+borrar opciones de target browsers
+agregar "defaults" (sin comillas)
+
+luego cerrar archivo "styles-dist.css" en el visual studio code
+modificar "styles.css" y guardar. debería modificar automaticamente el archivo "styles-dist.css", 
+sino cliquear en botón "process file" de prepros
+
